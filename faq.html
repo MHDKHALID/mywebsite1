@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسئلة الشائعة - NextAgent.tech | FAQ</title>
+    <meta name="description" content="الأسئلة الشائعة حول خدمات الذكاء الاصطناعي والأتمتة - Frequently Asked Questions about AI and Automation Services">
+    <meta name="keywords" content="FAQ, الأسئلة الشائعة, AI, Automation, NextAgent">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="FAQ - NextAgent.tech">
+    <meta property="og:description" content="Find answers to common questions about our AI and automation services">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextagent.tech/faq.html">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/cookie-consent.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container nav">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-robot"></i>
+                    <span>NextAgent</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">
+                    <span class="ar">الرئيسية</span>
+                    <span class="en">Home</span>
+                </a>
+                <a href="index.html#about" class="nav-link">
+                    <span class="ar">من نحن</span>
+                    <span class="en">About</span>
+                </a>
+                <a href="index.html#services" class="nav-link">
+                    <span class="ar">الخدمات</span>
+                    <span class="en">Services</span>
+                </a>
+                <a href="blog.html" class="nav-link">
+                    <span class="ar">المدونة</span>
+                    <span class="en">Blog</span>
+                </a>
+                <a href="faq.html" class="nav-link active">
+                    <span class="ar">الأسئلة الشائعة</span>
+                    <span class="en">FAQ</span>
+                </a>
+                <a href="index.html#contact" class="nav-link">
+                    <span class="ar">اتصل بنا</span>
+                    <span class="en">Contact</span>
+                </a>
+                <a href="booking.html" class="nav-link btn-primary">
+                    <span class="ar">احجز استشارة</span>
+                    <span class="en">Book Consultation</span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle">
+                    <i class="fas fa-globe"></i>
+                    <span class="ar">EN</span>
+                    <span class="en">عربي</span>
+                </button>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="faq-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">
+                    <span class="ar">الرئيسية</span>
+                    <span class="en">Home</span>
+                </a>
+                <i class="fas fa-chevron-right"></i>
+                <span class="ar">الأسئلة الشائعة</span>
+                <span class="en">FAQ</span>
+            </div>
+            <h1>
+                <i class="fas fa-question-circle"></i>
+                <span class="ar">الأسئلة الشائعة</span>
+                <span class="en">Frequently Asked Questions</span>
+            </h1>
+            <p class="ar">إجابات شاملة على أكثر الأسئلة شيوعًا حول خدماتنا وحلول الذكاء الاصطناعي</p>
+            <p class="en">Comprehensive answers to the most common questions about our services and AI solutions</p>
+            
+            <!-- Search Box -->
+            <div class="faq-search">
+                <i class="fas fa-search"></i>
+                <input type="text" id="faqSearchInput" placeholder="ابحث في الأسئلة الشائعة... / Search FAQs...">
+                <button id="clearSearch" class="clear-search" style="display: none;">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <main class="faq-content">
+        <div class="container">
+            <!-- Category Filters -->
+            <div class="faq-categories">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-th"></i>
+                    <span class="ar">الكل</span>
+                    <span class="en">All</span>
+                    <span class="count" id="count-all">30</span>
+                </button>
+                <button class="category-btn" data-category="general">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="ar">عام</span>
+                    <span class="en">General</span>
+                    <span class="count" id="count-general">5</span>
+                </button>
+                <button class="category-btn" data-category="services">
+                    <i class="fas fa-cogs"></i>
+                    <span class="ar">الخدمات</span>
+                    <span class="en">Services</span>
+                    <span class="count" id="count-services">6</span>
+                </button>
+                <button class="category-btn" data-category="pricing">
+                    <i class="fas fa-euro-sign"></i>
+                    <span class="ar">الأسعار</span>
+                    <span class="en">Pricing</span>
+                    <span class="count" id="count-pricing">5</span>
+                </button>
+                <button class="category-btn" data-category="technical">
+                    <i class="fas fa-code"></i>
+                    <span class="ar">تقني</span>
+                    <span class="en">Technical</span>
+                    <span class="count" id="count-technical">6</span>
+                </button>
+                <button class="category-btn" data-category="support">
+                    <i class="fas fa-life-ring"></i>
+                    <span class="ar">الدعم</span>
+                    <span class="en">Support</span>
+                    <span class="count" id="count-support">4</span>
+                </button>
+                <button class="category-btn" data-category="security">
+                    <i class="fas fa-shield-alt"></i>
+                    <span class="ar">الأمان</span>
+                    <span class="en">Security</span>
+                    <span class="count" id="count-security">4</span>
+                </button>
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>
+                    <span class="ar">لم نجد نتائج مطابقة</span>
+                    <span class="en">No matching results found</span>
+                </h3>
+                <p class="ar">حاول البحث بكلمات مختلفة أو تصفح الفئات أدناه</p>
+                <p class="en">Try searching with different keywords or browse categories below</p>
+            </div>
+
+            <!-- FAQ Items Container -->
+            <div class="faq-container" id="faqContainer">
+                <!-- General Questions -->
+                <div class="faq-item" data-category="general">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">ما هي NextAgent.tech؟</span>
+                            <span class="en">What is NextAgent.tech?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            NextAgent.tech هي منصة متخصصة في تقديم حلول الذكاء الاصطناعي والأتمتة للشركات الصغيرة والمتوسطة. 
+                            نقدم وكلاء ذكاء اصطناعي محادثين، أنظمة أتمتة العمليات، روبوتات دردشة ذكية، تحليلات بيانات متقدمة، 
+                            وأنظمة إدارة المواعيد والتسويق الآلي. هدفنا هو مساعدة الشركات على زيادة كفاءتها وتحسين تجربة العملاء 
+                            باستخدام أحدث تقنيات الذكاء الاصطناعي.
+                        </p>
+                        <p class="en">
+                            NextAgent.tech is a specialized platform for providing AI and automation solutions to small and medium-sized businesses. 
+                            We offer conversational AI agents, process automation systems, smart chatbots, advanced data analytics, 
+                            and appointment management and marketing automation systems. Our goal is to help businesses increase efficiency 
+                            and improve customer experience using the latest AI technologies.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="general">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">من هم العملاء المستهدفون؟</span>
+                            <span class="en">Who are your target customers?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            نستهدف الشركات الصغيرة والمتوسطة في مختلف القطاعات، وخاصة:
+                        </p>
+                        <p class="en">
+                            We target small and medium-sized businesses in various sectors, especially:
+                        </p>
+                        <ul>
+                            <li class="ar">العيادات الطبية وعيادات الأسنان</li>
+                            <li class="en">Medical clinics and dental practices</li>
+                            <li class="ar">مراكز التجميل والصالونات</li>
+                            <li class="en">Beauty centers and salons</li>
+                            <li class="ar">المكاتب الخدمية (محاماة، استشارات، محاسبة)</li>
+                            <li class="en">Service offices (law, consulting, accounting)</li>
+                            <li class="ar">وكالات التسويق والإعلان</li>
+                            <li class="en">Marketing and advertising agencies</li>
+                            <li class="ar">شركات التجارة الإلكترونية</li>
+                            <li class="en">E-commerce companies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="general">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">أين تقع شركتكم؟</span>
+                            <span class="en">Where is your company located?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            مقرنا الرئيسي في باريس، فرنسا. ومع ذلك، نقدم خدماتنا عن بُعد لجميع أنحاء العالم، 
+                            مع تركيز خاص على الأسواق الأوروبية والشرق أوسطية. يمكنك التواصل معنا عبر:
+                        </p>
+                        <p class="en">
+                            Our headquarters is in Paris, France. However, we provide our services remotely worldwide, 
+                            with special focus on European and Middle Eastern markets. You can reach us via:
+                        </p>
+                        <ul>
+                            <li><strong class="ar">الهاتف:</strong><strong class="en">Phone:</strong> +33 37 69 05 001</li>
+                            <li><strong class="ar">البريد:</strong><strong class="en">Email:</strong> salse@nextagent.tech</li>
+                            <li><strong>WhatsApp:</strong> +33 37 69 05 001</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="general">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">هل تقدمون استشارة مجانية؟</span>
+                            <span class="en">Do you offer free consultation?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            نعم! نقدم استشارة مجانية أولية لمدة 30 دقيقة لجميع العملاء المحتملين. خلال هذه الاستشارة:
+                        </p>
+                        <p class="en">
+                            Yes! We offer a free initial 30-minute consultation for all potential clients. During this consultation:
+                        </p>
+                        <ul>
+                            <li class="ar">نستمع لاحتياجاتك وتحدياتك</li>
+                            <li class="en">We listen to your needs and challenges</li>
+                            <li class="ar">نقيّم وضعك الحالي</li>
+                            <li class="en">We assess your current situation</li>
+                            <li class="ar">نقترح حلول مناسبة</li>
+                            <li class="en">We suggest suitable solutions</li>
+                            <li class="ar">نشرح كيف يمكننا مساعدتك</li>
+                            <li class="en">We explain how we can help</li>
+                            <li class="ar">نقدم تقدير مبدئي للتكلفة</li>
+                            <li class="en">We provide an initial cost estimate</li>
+                        </ul>
+                        <p>
+                            <a href="booking.html" class="cta-link">
+                                <span class="ar">احجز استشارتك المجانية الآن</span>
+                                <span class="en">Book your free consultation now</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="general">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">ما هي لغات الدعم المتوفرة؟</span>
+                            <span class="en">What support languages are available?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            نقدم خدماتنا ودعمنا باللغات التالية:
+                        </p>
+                        <p class="en">
+                            We provide our services and support in the following languages:
+                        </p>
+                        <ul>
+                            <li class="ar">العربية (بطلاقة كاملة)</li>
+                            <li class="en">Arabic (full fluency)</li>
+                            <li class="ar">الإنجليزية (بطلاقة كاملة)</li>
+                            <li class="en">English (full fluency)</li>
+                            <li class="ar">الفرنسية (لغة أساسية)</li>
+                            <li class="en">French (primary language)</li>
+                        </ul>
+                        <p class="ar">
+                            كما يمكن لوكلاء الذكاء الاصطناعي لدينا التعامل بأكثر من 100 لغة مختلفة حسب احتياجاتك.
+                        </p>
+                        <p class="en">
+                            Our AI agents can also handle over 100 different languages according to your needs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Services Questions -->
+                <div class="faq-item" data-category="services">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">ما هي الخدمات التي تقدمونها؟</span>
+                            <span class="en">What services do you offer?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">نقدم 6 خدمات أساسية:</p>
+                        <p class="en">We offer 6 core services:</p>
+                        <ul>
+                            <li>
+                                <strong>🤖 <span class="ar">وكلاء الذكاء الاصطناعي:</span><span class="en">AI Agents:</span></strong>
+                                <span class="ar">وكلاء محادثة ذكية متوفرة 24/7</span>
+                                <span class="en">Smart conversational agents available 24/7</span>
+                            </li>
+                            <li>
+                                <strong>⚙️ <span class="ar">أتمتة العمليات:</span><span class="en">Process Automation:</span></strong>
+                                <span class="ar">أتمتة المهام المتكررة وسير العمل</span>
+                                <span class="en">Automate repetitive tasks and workflows</span>
+                            </li>
+                            <li>
+                                <strong>💬 <span class="ar">الشات بوت الذكي:</span><span class="en">Smart Chatbot:</span></strong>
+                                <span class="ar">روبوتات محادثة متقدمة بتقنية NLP</span>
+                                <span class="en">Advanced chatbots with NLP technology</span>
+                            </li>
+                            <li>
+                                <strong>📊 <span class="ar">تحليل البيانات:</span><span class="en">Data Analytics:</span></strong>
+                                <span class="ar">تحليلات ذكية ورؤى استراتيجية</span>
+                                <span class="en">Smart analytics and strategic insights</span>
+                            </li>
+                            <li>
+                                <strong>📅 <span class="ar">إدارة المواعيد:</span><span class="en">Appointment Management:</span></strong>
+                                <span class="ar">أنظمة حجز تلقائية</span>
+                                <span class="en">Automated booking systems</span>
+                            </li>
+                            <li>
+                                <strong>📢 <span class="ar">أتمتة التسويق:</span><span class="en">Marketing Automation:</span></strong>
+                                <span class="ar">حملات تسويقية ذكية ومخصصة</span>
+                                <span class="en">Smart and personalized marketing campaigns</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="services">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">كم يستغرق تنفيذ المشروع؟</span>
+                            <span class="en">How long does project implementation take?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">المدة تعتمد على نوع الخدمة وحجم المشروع:</p>
+                        <p class="en">Duration depends on service type and project size:</p>
+                        <ul>
+                            <li><strong class="ar">الباقة الأساسية:</strong><strong class="en">Basic Package:</strong> <span class="ar">7-14 يوم</span><span class="en">7-14 days</span></li>
+                            <li><strong class="ar">الباقة الاحترافية:</strong><strong class="en">Professional Package:</strong> <span class="ar">14-21 يوم</span><span class="en">14-21 days</span></li>
+                            <li><strong class="ar">الباقة المؤسسية:</strong><strong class="en">Enterprise Package:</strong> <span class="ar">21-45 يوم</span><span class="en">21-45 days</span></li>
+                        </ul>
+                        <p class="ar">
+                            تشمل هذه المدة التخطيط، التطوير، الاختبار، والتدريب. نلتزم بالمواعيد المحددة ونوفر تحديثات منتظمة.
+                        </p>
+                        <p class="en">
+                            This duration includes planning, development, testing, and training. We commit to deadlines and provide regular updates.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="services">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">هل يمكن تخصيص الحلول حسب احتياجاتي؟</span>
+                            <span class="en">Can solutions be customized to my needs?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            بالتأكيد! جميع حلولنا قابلة للتخصيص بالكامل لتناسب احتياجاتك الفريدة:
+                        </p>
+                        <p class="en">
+                            Absolutely! All our solutions are fully customizable to suit your unique needs:
+                        </p>
+                        <ul>
+                            <li class="ar">تخصيص الوكيل الذكي ليتناسب مع هويتك التجارية</li>
+                            <li class="en">Customize the AI agent to match your brand identity</li>
+                            <li class="ar">تكامل مع أنظمتك الحالية</li>
+                            <li class="en">Integration with your existing systems</li>
+                            <li class="ar">لغة وأسلوب تواصل مخصص</li>
+                            <li class="en">Custom language and communication style</li>
+                            <li class="ar">ميزات إضافية حسب الطلب</li>
+                            <li class="en">Additional features on demand</li>
+                            <li class="ar">تصميم واجهات مستخدم خاصة</li>
+                            <li class="en">Custom user interface design</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="services">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">هل تقدمون تدريب للموظفين؟</span>
+                            <span class="en">Do you provide employee training?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            نعم، نقدم تدريب شامل لفريقك يشمل:
+                        </p>
+                        <p class="en">
+                            Yes, we provide comprehensive training for your team including:
+                        </p>
+                        <ul>
+                            <li class="ar">جلسات تدريبية مباشرة (عن بُعد أو حضوريًا)</li>
+                            <li class="en">Live training sessions (remote or in-person)</li>
+                            <li class="ar">مواد تعليمية مكتوبة ومرئية</li>
+                            <li class="en">Written and video training materials</li>
+                            <li class="ar">دليل استخدام مفصّل</li>
+                            <li class="en">Detailed user manual</li>
+                            <li class="ar">جلسات أسئلة وأجوبة</li>
+                            <li class="en">Q&A sessions</li>
+                            <li class="ar">دعم مستمر بعد التدريب</li>
+                            <li class="en">Ongoing post-training support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="services">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">هل يمكن التكامل مع الأنظمة الحالية؟</span>
+                            <span class="en">Can you integrate with existing systems?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            نعم، نوفر تكامل سلس مع معظم الأنظمة والمنصات الشائعة:
+                        </p>
+                        <p class="en">
+                            Yes, we provide seamless integration with most common systems and platforms:
+                        </p>
+                        <ul>
+                            <li class="ar">أنظمة إدارة علاقات العملاء (CRM)</li>
+                            <li class="en">Customer Relationship Management (CRM) systems</li>
+                            <li class="ar">منصات التجارة الإلكترونية (Shopify, WooCommerce)</li>
+                            <li class="en">E-commerce platforms (Shopify, WooCommerce)</li>
+                            <li class="ar">أدوات التسويق عبر البريد الإلكتروني</li>
+                            <li class="en">Email marketing tools</li>
+                            <li class="ar">أنظمة الحجز والجدولة</li>
+                            <li class="en">Booking and scheduling systems</li>
+                            <li class="ar">منصات التواصل الاجتماعي</li>
+                            <li class="en">Social media platforms</li>
+                            <li class="ar">تطبيقات المحاسبة</li>
+                            <li class="en">Accounting applications</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="services">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">ما مدى دقة وكلاء الذكاء الاصطناعي؟</span>
+                            <span class="en">How accurate are the AI agents?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            وكلاؤنا يتميزون بدقة عالية جدًا:
+                        </p>
+                        <p class="en">
+                            Our agents feature very high accuracy:
+                        </p>
+                        <ul>
+                            <li><strong>95%+</strong> <span class="ar">دقة في فهم الاستفسارات</span><span class="en">accuracy in understanding queries</span></li>
+                            <li><strong>90%+</strong> <span class="ar">معدل رضا العملاء</span><span class="en">customer satisfaction rate</span></li>
+                            <li><strong>85%</strong> <span class="ar">تقليل وقت الاستجابة</span><span class="en">response time reduction</span></li>
+                        </ul>
+                        <p class="ar">
+                            نستخدم أحدث نماذج اللغة الكبيرة (LLMs) ونقوم بتدريب مستمر لتحسين الأداء.
+                        </p>
+                        <p class="en">
+                            We use the latest Large Language Models (LLMs) and conduct continuous training to improve performance.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pricing Questions -->
+                <div class="faq-item" data-category="pricing">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">ما هي تكلفة الخدمات؟</span>
+                            <span class="en">What is the cost of services?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">نقدم ثلاث باقات رئيسية:</p>
+                        <p class="en">We offer three main packages:</p>
+                        <ul>
+                            <li>
+                                <strong class="ar">الباقة الأساسية:</strong><strong class="en">Basic Package:</strong> 
+                                <span class="ar">€299/شهريًا - مثالية للشركات الصغيرة</span>
+                                <span class="en">€299/month - Ideal for small businesses</span>
+                            </li>
+                            <li>
+                                <strong class="ar">الباقة الاحترافية:</strong><strong class="en">Professional Package:</strong> 
+                                <span class="ar">€599/شهريًا - الأكثر شعبية</span>
+                                <span class="en">€599/month - Most popular</span>
+                            </li>
+                            <li>
+                                <strong class="ar">الباقة المؤسسية:</strong><strong class="en">Enterprise Package:</strong> 
+                                <span class="ar">سعر مخصص - للشركات الكبيرة</span>
+                                <span class="en">Custom pricing - For large businesses</span>
+                            </li>
+                        </ul>
+                        <p class="ar">
+                            جميع الأسعار لا تشمل الضرائب. يمكن إضافة خدمات إضافية حسب الحاجة.
+                        </p>
+                        <p class="en">
+                            All prices exclude taxes. Additional services can be added as needed.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="pricing">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">هل توجد رسوم تأسيس؟</span>
+                            <span class="en">Are there setup fees?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            رسوم التأسيس تختلف حسب الباقة:
+                        </p>
+                        <p class="en">
+                            Setup fees vary by package:
+                        </p>
+                        <ul>
+                            <li><strong class="ar">الباقة الأساسية:</strong><strong class="en">Basic Package:</strong> €0 <span class="ar">(مجانًا)</span><span class="en">(free)</span></li>
+                            <li><strong class="ar">الباقة الاحترافية:</strong><strong class="en">Professional Package:</strong> €200</li>
+                            <li><strong class="ar">الباقة المؤسسية:</strong><strong class="en">Enterprise Package:</strong> <span class="ar">حسب المشروع</span><span class="en">Project-dependent</span></li>
+                        </ul>
+                        <p class="ar">
+                            رسوم التأسيس تُدفع مرة واحدة فقط وتشمل الإعداد الكامل، التخصيص، والتدريب الأساسي.
+                        </p>
+                        <p class="en">
+                            Setup fees are one-time only and include full setup, customization, and basic training.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="pricing">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">هل يمكن إلغاء الاشتراك؟</span>
+                            <span class="en">Can I cancel my subscription?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            نعم، يمكنك إلغاء اشتراكك في أي وقت:
+                        </p>
+                        <p class="en">
+                            Yes, you can cancel your subscription at any time:
+                        </p>
+                        <ul>
+                            <li class="ar">لا توجد عقود طويلة الأجل ملزمة</li>
+                            <li class="en">No long-term binding contracts</li>
+                            <li class="ar">إلغاء بإشعار 30 يوم</li>
+                            <li class="en">Cancellation with 30-day notice</li>
+                            <li class="ar">ضمان استرداد كامل خلال 14 يوم الأولى</li>
+                            <li class="en">Full refund guarantee within first 14 days</li>
+                            <li class="ar">نقل بياناتك عند الإلغاء</li>
+                            <li class="en">Data transfer upon cancellation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="pricing">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">هل توجد خصومات للاشتراك السنوي؟</span>
+                            <span class="en">Are there discounts for annual subscriptions?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            نعم! نقدم خصومات جذابة للاشتراكات السنوية:
+                        </p>
+                        <p class="en">
+                            Yes! We offer attractive discounts for annual subscriptions:
+                        </p>
+                        <ul>
+                            <li><strong>15%</strong> <span class="ar">خصم على الباقة الأساسية</span><span class="en">discount on Basic Package</span></li>
+                            <li><strong>20%</strong> <span class="ar">خصم على الباقة الاحترافية</span><span class="en">discount on Professional Package</span></li>
+                            <li><strong>25%</strong> <span class="ar">خصم على الباقة المؤسسية</span><span class="en">discount on Enterprise Package</span></li>
+                        </ul>
+                        <p class="ar">
+                            بالإضافة إلى ذلك، نقدم خصومات خاصة للمؤسسات التعليمية والجمعيات الخيرية.
+                        </p>
+                        <p class="en">
+                            Additionally, we offer special discounts for educational institutions and charities.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="pricing">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">ما هي طرق الدفع المتاحة؟</span>
+                            <span class="en">What payment methods are available?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">نقبل طرق الدفع التالية:</p>
+                        <p class="en">We accept the following payment methods:</p>
+                        <ul>
+                            <li><i class="fas fa-credit-card"></i> <span class="ar">بطاقات الائتمان (Visa, MasterCard, Amex)</span><span class="en">Credit cards (Visa, MasterCard, Amex)</span></li>
+                            <li><i class="fas fa-university"></i> <span class="ar">التحويل البنكي (SEPA, SWIFT)</span><span class="en">Bank transfer (SEPA, SWIFT)</span></li>
+                            <li><i class="fab fa-paypal"></i> <span class="ar">PayPal</span><span class="en">PayPal</span></li>
+                            <li><i class="fas fa-file-invoice-dollar"></i> <span class="ar">الفواتير (للشركات)</span><span class="en">Invoicing (for businesses)</span></li>
+                        </ul>
+                        <p class="ar">
+                            جميع المعاملات آمنة ومشفرة بتقنية SSL.
+                        </p>
+                        <p class="en">
+                            All transactions are secure and encrypted with SSL technology.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Technical Questions -->
+                <div class="faq-item" data-category="technical">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">ما هي التقنيات المستخدمة؟</span>
+                            <span class="en">What technologies are used?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">نستخدم أحدث التقنيات في مجال الذكاء الاصطناعي:</p>
+                        <p class="en">We use the latest AI technologies:</p>
+                        <ul>
+                            <li><strong>LLMs:</strong> GPT-4, Claude, Gemini</li>
+                            <li><strong>NLP:</strong> <span class="ar">معالجة اللغة الطبيعية المتقدمة</span><span class="en">Advanced natural language processing</span></li>
+                            <li><strong>ML:</strong> <span class="ar">خوارزميات التعلم الآلي</span><span class="en">Machine learning algorithms</span></li>
+                            <li><strong>Cloud:</strong> AWS, Google Cloud, Azure</li>
+                            <li><strong>APIs:</strong> RESTful, GraphQL</li>
+                            <li><strong>Security:</strong> SSL/TLS, OAuth 2.0</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="technical">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">هل النظام يعمل على جميع المنصات؟</span>
+                            <span class="en">Does the system work on all platforms?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">نعم، حلولنا متوافقة مع جميع المنصات:</p>
+                        <p class="en">Yes, our solutions are compatible with all platforms:</p>
+                        <ul>
+                            <li><i class="fab fa-windows"></i> Windows</li>
+                            <li><i class="fab fa-apple"></i> macOS</li>
+                            <li><i class="fab fa-linux"></i> Linux</li>
+                            <li><i class="fab fa-android"></i> Android</li>
+                            <li><i class="fab fa-apple"></i> iOS</li>
+                            <li><i class="fas fa-globe"></i> <span class="ar">متصفحات الويب (Chrome, Firefox, Safari, Edge)</span><span class="en">Web browsers (Chrome, Firefox, Safari, Edge)</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="technical">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">ما مدى سرعة الاستجابة؟</span>
+                            <span class="en">How fast is the response time?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">نضمن استجابة سريعة جدًا:</p>
+                        <p class="en">We guarantee very fast response:</p>
+                        <ul>
+                            <li><strong>&lt; 2 <span class="ar">ثانية</span><span class="en">seconds</span></strong> <span class="ar">متوسط زمن الاستجابة</span><span class="en">average response time</span></li>
+                            <li><strong>99.9%</strong> <span class="ar">وقت التشغيل (Uptime)</span><span class="en">uptime guarantee</span></li>
+                            <li><strong>24/7</strong> <span class="ar">توفر مستمر</span><span class="en">continuous availability</span></li>
+                            <li><span class="ar">خوادم موزعة عالميًا (CDN)</span><span class="en">Globally distributed servers (CDN)</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="technical">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">هل يمكن الوصول عبر API؟</span>
+                            <span class="en">Can I access via API?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            نعم، نوفر واجهة برمجية كاملة (API) للباقات الاحترافية والمؤسسية:
+                        </p>
+                        <p class="en">
+                            Yes, we provide a complete API for Professional and Enterprise packages:
+                        </p>
+                        <ul>
+                            <li><strong>RESTful API</strong> <span class="ar">لجميع الوظائف</span><span class="en">for all functions</span></li>
+                            <li><strong>Webhooks</strong> <span class="ar">للإشعارات الفورية</span><span class="en">for real-time notifications</span></li>
+                            <li><strong>SDK</strong> <span class="ar">بلغات متعددة</span><span class="en">in multiple languages</span></li>
+                            <li><strong class="ar">وثائق شاملة</strong><strong class="en">Comprehensive documentation</strong></li>
+                            <li><strong class="ar">أمثلة كود جاهزة</strong><strong class="en">Ready code examples</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="technical">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">هل يدعم النظام اللغة العربية؟</span>
+                            <span class="en">Does the system support Arabic language?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            بالتأكيد! نحن متخصصون في دعم اللغة العربية:
+                        </p>
+                        <p class="en">
+                            Absolutely! We specialize in Arabic language support:
+                        </p>
+                        <ul>
+                            <li class="ar">فهم كامل للعربية الفصحى والعامية</li>
+                            <li class="en">Full understanding of Modern Standard Arabic and dialects</li>
+                            <li class="ar">واجهات RTL (من اليمين إلى اليسار)</li>
+                            <li class="en">RTL (right-to-left) interfaces</li>
+                            <li class="ar">خطوط عربية احترافية</li>
+                            <li class="en">Professional Arabic fonts</li>
+                            <li class="ar">معالجة السياق العربي والثقافي</li>
+                            <li class="en">Arabic cultural context processing</li>
+                            <li class="ar">دعم لهجات مختلفة (مصرية، خليجية، شامية، مغربية)</li>
+                            <li class="en">Support for different dialects (Egyptian, Gulf, Levantine, Moroccan)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="technical">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">ما هي متطلبات النظام؟</span>
+                            <span class="en">What are the system requirements?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">متطلبات بسيطة جدًا:</p>
+                        <p class="en">Very simple requirements:</p>
+                        <ul>
+                            <li><i class="fas fa-wifi"></i> <span class="ar">اتصال إنترنت مستقر</span><span class="en">Stable internet connection</span></li>
+                            <li><i class="fas fa-browser"></i> <span class="ar">متصفح ويب حديث</span><span class="en">Modern web browser</span></li>
+                            <li><i class="fas fa-mobile-alt"></i> <span class="ar">أي جهاز (كمبيوتر، هاتف، تابلت)</span><span class="en">Any device (computer, phone, tablet)</span></li>
+                        </ul>
+                        <p class="ar">
+                            لا حاجة لتثبيت برامج أو تطبيقات - كل شيء قائم على السحابة!
+                        </p>
+                        <p class="en">
+                            No need to install software or apps - everything is cloud-based!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Support Questions -->
+                <div class="faq-item" data-category="support">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">ما هي ساعات الدعم الفني؟</span>
+                            <span class="en">What are support hours?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">نقدم دعم فني مستمر:</p>
+                        <p class="en">We provide continuous technical support:</p>
+                        <ul>
+                            <li>
+                                <strong class="ar">الباقة الأساسية:</strong><strong class="en">Basic Package:</strong>
+                                <span class="ar">الإثنين-الجمعة، 9:00-18:00 (توقيت باريس)</span>
+                                <span class="en">Monday-Friday, 9:00 AM-6:00 PM (Paris time)</span>
+                            </li>
+                            <li>
+                                <strong class="ar">الباقة الاحترافية:</strong><strong class="en">Professional Package:</strong>
+                                <span class="ar">7 أيام في الأسبوع، 8:00-22:00</span>
+                                <span class="en">7 days a week, 8:00 AM-10:00 PM</span>
+                            </li>
+                            <li>
+                                <strong class="ar">الباقة المؤسسية:</strong><strong class="en">Enterprise Package:</strong>
+                                <span class="ar">24/7 دعم متواصل</span>
+                                <span class="en">24/7 continuous support</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="support">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">كيف يمكنني التواصل مع الدعم؟</span>
+                            <span class="en">How can I contact support?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">نوفر قنوات متعددة للتواصل:</p>
+                        <p class="en">We provide multiple communication channels:</p>
+                        <ul>
+                            <li><i class="fas fa-envelope"></i> <strong class="ar">البريد:</strong><strong class="en">Email:</strong> salse@nextagent.tech</li>
+                            <li><i class="fas fa-phone"></i> <strong class="ar">الهاتف:</strong><strong class="en">Phone:</strong> +33 37 69 05 001</li>
+                            <li><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> +33 37 69 05 001</li>
+                            <li><i class="fas fa-comments"></i> <strong class="ar">الدردشة المباشرة</strong><strong class="en">Live Chat</strong> <span class="ar">(على الموقع)</span><span class="en">(on website)</span></li>
+                            <li><i class="fas fa-ticket-alt"></i> <strong class="ar">نظام التذاكر</strong><strong class="en">Ticketing System</strong> <span class="ar">(للعملاء)</span><span class="en">(for clients)</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="support">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">كم يستغرق الرد على الاستفسارات؟</span>
+                            <span class="en">How long does it take to respond to inquiries?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">نلتزم بأوقات استجابة سريعة:</p>
+                        <p class="en">We commit to fast response times:</p>
+                        <ul>
+                            <li><strong class="ar">استفسارات عاجلة:</strong><strong class="en">Urgent inquiries:</strong> <span class="ar">&lt; 1 ساعة</span><span class="en">&lt; 1 hour</span></li>
+                            <li><strong class="ar">استفسارات عامة:</strong><strong class="en">General inquiries:</strong> <span class="ar">&lt; 4 ساعات</span><span class="en">&lt; 4 hours</span></li>
+                            <li><strong class="ar">طلبات تقنية:</strong><strong class="en">Technical requests:</strong> <span class="ar">&lt; 8 ساعات</span><span class="en">&lt; 8 hours</span></li>
+                        </ul>
+                        <p class="ar">
+                            في حالات الطوارئ (الباقة المؤسسية)، نستجيب خلال 15-30 دقيقة.
+                        </p>
+                        <p class="en">
+                            In emergency cases (Enterprise package), we respond within 15-30 minutes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="support">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">هل توجد مكتبة مساعدة أو دليل؟</span>
+                            <span class="en">Is there a help library or guide?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">نعم، نوفر مركز مساعدة شامل يحتوي على:</p>
+                        <p class="en">Yes, we provide a comprehensive help center containing:</p>
+                        <ul>
+                            <li class="ar">أدلة استخدام مفصّلة</li>
+                            <li class="en">Detailed user guides</li>
+                            <li class="ar">فيديوهات تعليمية</li>
+                            <li class="en">Tutorial videos</li>
+                            <li class="ar">أسئلة شائعة موسّعة</li>
+                            <li class="en">Expanded FAQ</li>
+                            <li class="ar">مقالات تقنية</li>
+                            <li class="en">Technical articles</li>
+                            <li class="ar">أمثلة وحالات استخدام</li>
+                            <li class="en">Examples and use cases</li>
+                            <li class="ar">دروس خطوة بخطوة</li>
+                            <li class="en">Step-by-step tutorials</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Security Questions -->
+                <div class="faq-item" data-category="security">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">كيف تحمون بياناتي؟</span>
+                            <span class="en">How do you protect my data?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">أمان بياناتك أولويتنا القصوى. نستخدم:</p>
+                        <p class="en">Your data security is our top priority. We use:</p>
+                        <ul>
+                            <li><strong>SSL/TLS</strong> <span class="ar">تشفير شامل للبيانات</span><span class="en">end-to-end encryption</span></li>
+                            <li><strong>ISO 27001</strong> <span class="ar">معايير أمان معتمدة</span><span class="en">certified security standards</span></li>
+                            <li><strong>GDPR</strong> <span class="ar">امتثال كامل</span><span class="en">full compliance</span></li>
+                            <li><strong class="ar">نسخ احتياطية يومية</strong><strong class="en">Daily backups</strong></li>
+                            <li><strong class="ar">خوادم آمنة في أوروبا</strong><strong class="en">Secure servers in Europe</strong></li>
+                            <li><strong class="ar">مراقبة أمنية 24/7</strong><strong class="en">24/7 security monitoring</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="security">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">أين يتم تخزين البيانات؟</span>
+                            <span class="en">Where is data stored?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            جميع البيانات مخزنة في مراكز بيانات آمنة في الاتحاد الأوروبي:
+                        </p>
+                        <p class="en">
+                            All data is stored in secure data centers in the European Union:
+                        </p>
+                        <ul>
+                            <li><i class="fas fa-server"></i> <span class="ar">مراكز بيانات معتمدة Tier 3</span><span class="en">Tier 3 certified data centers</span></li>
+                            <li><i class="fas fa-map-marker-alt"></i> <span class="ar">مواقع: فرنسا، ألمانيا، هولندا</span><span class="en">Locations: France, Germany, Netherlands</span></li>
+                            <li><i class="fas fa-lock"></i> <span class="ar">تشفير كامل للبيانات المخزنة</span><span class="en">Full encryption of stored data</span></li>
+                            <li><i class="fas fa-shield-alt"></i> <span class="ar">حماية فيزيائية متقدمة</span><span class="en">Advanced physical protection</span></li>
+                        </ul>
+                        <p class="ar">
+                            نضمن عدم نقل بياناتك خارج الاتحاد الأوروبي دون موافقتك الصريحة.
+                        </p>
+                        <p class="en">
+                            We ensure your data is not transferred outside the EU without your explicit consent.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="security">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">هل أنتم متوافقون مع GDPR؟</span>
+                            <span class="en">Are you GDPR compliant?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            نعم، نحن ملتزمون بالكامل بقوانين GDPR:
+                        </p>
+                        <p class="en">
+                            Yes, we are fully compliant with GDPR regulations:
+                        </p>
+                        <ul>
+                            <li class="ar">معالجة بيانات شفافة</li>
+                            <li class="en">Transparent data processing</li>
+                            <li class="ar">حق الوصول والتصحيح والحذف</li>
+                            <li class="en">Right to access, rectify, and delete</li>
+                            <li class="ar">موافقة واضحة قبل جمع البيانات</li>
+                            <li class="en">Clear consent before data collection</li>
+                            <li class="ar">إشعار بانتهاكات البيانات خلال 72 ساعة</li>
+                            <li class="en">Data breach notification within 72 hours</li>
+                            <li class="ar">مسؤول حماية بيانات معيّن</li>
+                            <li class="en">Designated Data Protection Officer</li>
+                        </ul>
+                        <p>
+                            <a href="privacy.html" class="cta-link">
+                                <span class="ar">اقرأ سياسة الخصوصية الكاملة</span>
+                                <span class="en">Read our full Privacy Policy</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="security">
+                    <div class="faq-question">
+                        <h3>
+                            <span class="ar">من يمكنه الوصول إلى بياناتي؟</span>
+                            <span class="en">Who can access my data?</span>
+                        </h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="ar">
+                            الوصول إلى بياناتك محدود جدًا ومحمي:
+                        </p>
+                        <p class="en">
+                            Access to your data is very limited and protected:
+                        </p>
+                        <ul>
+                            <li><strong class="ar">أنت فقط:</strong><strong class="en">Only you:</strong> <span class="ar">وصول كامل لبياناتك</span><span class="en">Full access to your data</span></li>
+                            <li><strong class="ar">موظفون مصرح لهم:</strong><strong class="en">Authorized staff:</strong> <span class="ar">للدعم الفني فقط، بموافقتك</span><span class="en">For technical support only, with your consent</span></li>
+                            <li><strong class="ar">لا أطراف ثالثة:</strong><strong class="en">No third parties:</strong> <span class="ar">نحن لا نبيع أو نشارك بياناتك</span><span class="en">We do not sell or share your data</span></li>
+                        </ul>
+                        <p class="ar">
+                            جميع الموظفين موقعون على اتفاقيات سرية صارمة.
+                        </p>
+                        <p class="en">
+                            All employees have signed strict confidentiality agreements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Still Have Questions CTA -->
+            <div class="faq-cta">
+                <h2>
+                    <span class="ar">لا تزال لديك أسئلة؟</span>
+                    <span class="en">Still have questions?</span>
+                </h2>
+                <p class="ar">فريقنا جاهز لمساعدتك! تواصل معنا الآن للحصول على إجابات فورية.</p>
+                <p class="en">Our team is ready to help! Contact us now for immediate answers.</p>
+                <div class="cta-buttons">
+                    <a href="booking.html" class="btn-primary">
+                        <i class="fas fa-calendar-check"></i>
+                        <span class="ar">احجز استشارة مجانية</span>
+                        <span class="en">Book Free Consultation</span>
+                    </a>
+                    <a href="index.html#contact" class="btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        <span class="ar">أرسل لنا رسالة</span>
+                        <span class="en">Send Us a Message</span>
+                    </a>
+                    <a href="https://wa.me/33376905001" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="ar">دردش معنا على واتساب</span>
+                        <span class="en">Chat on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>
+                        <i class="fas fa-robot"></i>
+                        NextAgent
+                    </h3>
+                    <p class="ar">حلول الذكاء الاصطناعي والأتمتة للشركات الصغيرة والمتوسطة</p>
+                    <p class="en">AI and Automation Solutions for Small and Medium Businesses</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>
+                        <span class="ar">روابط سريعة</span>
+                        <span class="en">Quick Links</span>
+                    </h4>
+                    <ul>
+                        <li><a href="index.html">
+                            <span class="ar">الرئيسية</span>
+                            <span class="en">Home</span>
+                        </a></li>
+                        <li><a href="blog.html">
+                            <span class="ar">المدونة</span>
+                            <span class="en">Blog</span>
+                        </a></li>
+                        <li><a href="faq.html">
+                            <span class="ar">الأسئلة الشائعة</span>
+                            <span class="en">FAQ</span>
+                        </a></li>
+                        <li><a href="privacy.html">
+                            <span class="ar">سياسة الخصوصية</span>
+                            <span class="en">Privacy Policy</span>
+                        </a></li>
+                        <li><a href="terms.html">
+                            <span class="ar">شروط الخدمة</span>
+                            <span class="en">Terms of Service</span>
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>
+                        <span class="ar">تواصل معنا</span>
+                        <span class="en">Contact Us</span>
+                    </h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> salse@nextagent.tech</li>
+                        <li><i class="fas fa-phone"></i> +33 37 69 05 001</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 
+                            <span class="ar">باريس، فرنسا</span>
+                            <span class="en">Paris, France</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 NextAgent.tech - 
+                    <span class="ar">جميع الحقوق محفوظة</span>
+                    <span class="en">All Rights Reserved</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/33376905001" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/cookie-consent.js"></script>
+</body>
+</html>

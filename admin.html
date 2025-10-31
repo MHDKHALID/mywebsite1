@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - NextAgent.tech</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
+</head>
+<body class="admin-body">
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-container">
+            <div class="admin-logo">
+                <span class="logo-icon">🤖</span>
+                <span class="logo-text">NextAgent Admin</span>
+            </div>
+            
+            <div class="admin-nav">
+                <button class="lang-toggle" id="langToggle">
+                    <span class="lang-text">EN</span>
+                </button>
+                <a href="index.html" class="btn-back" data-ar="العودة للموقع" data-en="Back to Website">
+                    <i class="fas fa-home"></i>
+                    <span>العودة للموقع</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Sidebar -->
+    <aside class="admin-sidebar" id="adminSidebar">
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                <i class="fas fa-chart-line"></i>
+                <span data-ar="لوحة القيادة" data-en="Dashboard">لوحة القيادة</span>
+            </a>
+            <a href="#products" class="nav-item" data-section="products">
+                <i class="fas fa-box"></i>
+                <span data-ar="المنتجات" data-en="Products">المنتجات</span>
+                <span class="badge" id="productsBadge">0</span>
+            </a>
+            <a href="#testimonials" class="nav-item" data-section="testimonials">
+                <i class="fas fa-star"></i>
+                <span data-ar="آراء العملاء" data-en="Testimonials">آراء العملاء</span>
+                <span class="badge" id="testimonialsBadge">0</span>
+            </a>
+            <a href="#surveys" class="nav-item" data-section="surveys">
+                <i class="fas fa-clipboard-list"></i>
+                <span data-ar="الاستبيانات" data-en="Surveys">الاستبيانات</span>
+                <span class="badge" id="surveysBadge">0</span>
+            </a>
+            <a href="#messages" class="nav-item" data-section="messages">
+                <i class="fas fa-envelope"></i>
+                <span data-ar="الرسائل" data-en="Messages">الرسائل</span>
+                <span class="badge" id="messagesBadge">0</span>
+            </a>
+            <a href="#blog" class="nav-item" data-section="blog">
+                <i class="fas fa-blog"></i>
+                <span data-ar="المدونة" data-en="Blog">المدونة</span>
+                <span class="badge" id="blogBadge">0</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Admin Main Content -->
+    <main class="admin-main">
+        <div class="admin-container">
+            
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="admin-section active">
+                <div class="section-header">
+                    <h1 data-ar="لوحة القيادة" data-en="Dashboard">لوحة القيادة</h1>
+                    <p data-ar="نظرة عامة على أداء الموقع" data-en="Overview of website performance">نظرة عامة على أداء الموقع</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #fca311, #e39410);">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="totalProducts">0</h3>
+                            <p data-ar="المنتجات" data-en="Products">المنتجات</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #274c77, #1a3a5c);">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="totalTestimonials">0</h3>
+                            <p data-ar="آراء العملاء" data-en="Testimonials">آراء العملاء</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #283618, #1a2410);">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="totalSurveys">0</h3>
+                            <p data-ar="الاستبيانات" data-en="Surveys">الاستبيانات</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #e63946, #d62828);">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="totalMessages">0</h3>
+                            <p data-ar="الرسائل" data-en="Messages">الرسائل</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h2 data-ar="النشاط الأخير" data-en="Recent Activity">النشاط الأخير</h2>
+                    <div id="recentActivityList" class="activity-list">
+                        <div class="loading">جاري التحميل...</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Section -->
+            <section id="products" class="admin-section">
+                <div class="section-header">
+                    <h1 data-ar="إدارة المنتجات" data-en="Manage Products">إدارة المنتجات</h1>
+                    <button class="btn btn-primary" id="addProductBtn" data-ar="إضافة منتج جديد" data-en="Add New Product">
+                        <i class="fas fa-plus"></i>
+                        <span>إضافة منتج جديد</span>
+                    </button>
+                </div>
+
+                <div class="data-table-wrapper">
+                    <table class="data-table" id="productsTable">
+                        <thead>
+                            <tr>
+                                <th data-ar="الأيقونة" data-en="Icon">الأيقونة</th>
+                                <th data-ar="العنوان" data-en="Title">العنوان</th>
+                                <th data-ar="النوع" data-en="Type">النوع</th>
+                                <th data-ar="الحجم" data-en="Size">الحجم</th>
+                                <th data-ar="التاريخ" data-en="Date">التاريخ</th>
+                                <th data-ar="الإجراءات" data-en="Actions">الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsTableBody">
+                            <tr>
+                                <td colspan="6" class="loading">جاري تحميل المنتجات...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section id="testimonials" class="admin-section">
+                <div class="section-header">
+                    <h1 data-ar="إدارة آراء العملاء" data-en="Manage Testimonials">إدارة آراء العملاء</h1>
+                    <button class="btn btn-primary" id="addTestimonialBtn" data-ar="إضافة رأي جديد" data-en="Add New Testimonial">
+                        <i class="fas fa-plus"></i>
+                        <span>إضافة رأي جديد</span>
+                    </button>
+                </div>
+
+                <div class="testimonials-grid-admin" id="testimonialsGrid">
+                    <div class="loading">جاري تحميل آراء العملاء...</div>
+                </div>
+            </section>
+
+            <!-- Surveys Section -->
+            <section id="surveys" class="admin-section">
+                <div class="section-header">
+                    <h1 data-ar="استجابات الاستبيانات" data-en="Survey Responses">استجابات الاستبيانات</h1>
+                    <button class="btn btn-secondary" id="exportSurveysBtn" data-ar="تصدير CSV" data-en="Export CSV">
+                        <i class="fas fa-download"></i>
+                        <span>تصدير CSV</span>
+                    </button>
+                </div>
+
+                <div class="data-table-wrapper">
+                    <table class="data-table" id="surveysTable">
+                        <thead>
+                            <tr>
+                                <th data-ar="الشركة" data-en="Company">الشركة</th>
+                                <th data-ar="النشاط" data-en="Industry">النشاط</th>
+                                <th data-ar="الاسم" data-en="Name">الاسم</th>
+                                <th data-ar="البريد" data-en="Email">البريد</th>
+                                <th data-ar="الدخل" data-en="Revenue">الدخل</th>
+                                <th data-ar="التاريخ" data-en="Date">التاريخ</th>
+                                <th data-ar="الإجراءات" data-en="Actions">الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="surveysTableBody">
+                            <tr>
+                                <td colspan="7" class="loading">جاري تحميل الاستبيانات...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Messages Section -->
+            <section id="messages" class="admin-section">
+                <div class="section-header">
+                    <h1 data-ar="رسائل التواصل" data-en="Contact Messages">رسائل التواصل</h1>
+                    <button class="btn btn-secondary" id="markAllReadBtn" data-ar="تحديد الكل كمقروء" data-en="Mark All as Read">
+                        <i class="fas fa-check-double"></i>
+                        <span>تحديد الكل كمقروء</span>
+                    </button>
+                </div>
+
+                <div class="messages-list" id="messagesList">
+                    <div class="loading">جاري تحميل الرسائل...</div>
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section id="blog" class="admin-section">
+                <div class="section-header">
+                    <h1 data-ar="إدارة المدونة" data-en="Manage Blog">إدارة المدونة</h1>
+                    <button class="btn btn-primary" id="addBlogBtn" data-ar="إضافة مقال جديد" data-en="Add New Article">
+                        <i class="fas fa-plus"></i>
+                        <span>إضافة مقال جديد</span>
+                    </button>
+                </div>
+
+                <div class="blog-grid-admin" id="blogGrid">
+                    <div class="loading">جاري تحميل المقالات...</div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Modal for Adding/Editing Product -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="productModalTitle" data-ar="إضافة منتج جديد" data-en="Add New Product">إضافة منتج جديد</h2>
+                <button class="modal-close" data-modal="productModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="productForm" class="admin-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label data-ar="العنوان بالعربية *" data-en="Title (Arabic) *">العنوان بالعربية *</label>
+                        <input type="text" name="title_ar" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-ar="العنوان بالإنجليزية *" data-en="Title (English) *">العنوان بالإنجليزية *</label>
+                        <input type="text" name="title_en" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-ar="الوصف بالعربية *" data-en="Description (Arabic) *">الوصف بالعربية *</label>
+                    <textarea name="description_ar" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label data-ar="الوصف بالإنجليزية *" data-en="Description (English) *">الوصف بالإنجليزية *</label>
+                    <textarea name="description_en" rows="3" required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label data-ar="نوع الملف *" data-en="File Type *">نوع الملف *</label>
+                        <select name="file_type" required>
+                            <option value="PDF">PDF</option>
+                            <option value="JSON">JSON</option>
+                            <option value="DOCX">DOCX</option>
+                            <option value="XLSX">XLSX</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label data-ar="حجم الملف *" data-en="File Size *">حجم الملف *</label>
+                        <input type="text" name="file_size" placeholder="2.5 MB" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-ar="رابط التحميل (Google Drive) *" data-en="Download URL (Google Drive) *">رابط التحميل *</label>
+                    <input type="url" name="download_url" required>
+                </div>
+
+                <div class="form-group">
+                    <label data-ar="الأيقونة (Emoji) *" data-en="Icon (Emoji) *">الأيقونة *</label>
+                    <input type="text" name="icon" placeholder="📚" required maxlength="2">
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" data-modal="productModal" data-ar="إلغاء" data-en="Cancel">إلغاء</button>
+                    <button type="submit" class="btn btn-primary" data-ar="حفظ المنتج" data-en="Save Product">حفظ المنتج</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Adding/Editing Testimonial -->
+    <div id="testimonialModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="testimonialModalTitle" data-ar="إضافة رأي جديد" data-en="Add New Testimonial">إضافة رأي جديد</h2>
+                <button class="modal-close" data-modal="testimonialModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="testimonialForm" class="admin-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label data-ar="اسم العميل بالعربية *" data-en="Client Name (Arabic) *">اسم العميل بالعربية *</label>
+                        <input type="text" name="name_ar" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-ar="اسم العميل بالإنجليزية *" data-en="Client Name (English) *">اسم العميل بالإنجليزية *</label>
+                        <input type="text" name="name_en" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label data-ar="الشركة بالعربية *" data-en="Company (Arabic) *">الشركة بالعربية *</label>
+                        <input type="text" name="company_ar" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-ar="الشركة بالإنجليزية *" data-en="Company (English) *">الشركة بالإنجليزية *</label>
+                        <input type="text" name="company_en" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-ar="الرأي بالعربية *" data-en="Testimonial (Arabic) *">الرأي بالعربية *</label>
+                    <textarea name="testimonial_ar" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label data-ar="الرأي بالإنجليزية *" data-en="Testimonial (English) *">الرأي بالإنجليزية *</label>
+                    <textarea name="testimonial_en" rows="4" required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label data-ar="التقييم (من 5) *" data-en="Rating (out of 5) *">التقييم *</label>
+                        <select name="rating" required>
+                            <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+                            <option value="4">⭐⭐⭐⭐ (4)</option>
+                            <option value="3">⭐⭐⭐ (3)</option>
+                            <option value="2">⭐⭐ (2)</option>
+                            <option value="1">⭐ (1)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label data-ar="الحرف الأول للأفاتار *" data-en="Avatar Initial *">الحرف الأول *</label>
+                        <input type="text" name="avatar" required maxlength="1" placeholder="A">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" data-modal="testimonialModal" data-ar="إلغاء" data-en="Cancel">إلغاء</button>
+                    <button type="submit" class="btn btn-primary" data-ar="حفظ الرأي" data-en="Save Testimonial">حفظ الرأي</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Adding/Editing Blog Post -->
+    <div id="blogModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="blogModalTitle" data-ar="إضافة مقال جديد" data-en="Add New Article">إضافة مقال جديد</h2>
+                <button class="modal-close" data-modal="blogModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="blogForm" class="admin-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label data-ar="العنوان بالعربية *" data-en="Title (Arabic) *">العنوان بالعربية *</label>
+                        <input type="text" name="title_ar" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-ar="العنوان بالإنجليزية *" data-en="Title (English) *">العنوان بالإنجليزية *</label>
+                        <input type="text" name="title_en" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-ar="الرابط (Slug) *" data-en="Slug *">الرابط (Slug) *</label>
+                    <input type="text" name="slug" placeholder="ai-transform-business-2025" required>
+                    <small data-ar="سيتم استخدامه في رابط URL للمقال" data-en="Will be used in the article URL">سيتم استخدامه في رابط URL للمقال</small>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label data-ar="الملخص بالعربية *" data-en="Excerpt (Arabic) *">الملخص بالعربية *</label>
+                        <textarea name="excerpt_ar" rows="2" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label data-ar="الملخص بالإنجليزية *" data-en="Excerpt (English) *">الملخص بالإنجليزية *</label>
+                        <textarea name="excerpt_en" rows="2" required></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-ar="المحتوى بالعربية *" data-en="Content (Arabic) *">المحتوى بالعربية *</label>
+                    <textarea name="content_ar" rows="8" required placeholder="<h2>عنوان</h2><p>المحتوى...</p>"></textarea>
+                    <small data-ar="يمكنك استخدام HTML للتنسيق" data-en="You can use HTML for formatting">يمكنك استخدام HTML للتنسيق</small>
+                </div>
+
+                <div class="form-group">
+                    <label data-ar="المحتوى بالإنجليزية *" data-en="Content (English) *">المحتوى بالإنجليزية *</label>
+                    <textarea name="content_en" rows="8" required placeholder="<h2>Title</h2><p>Content...</p>"></textarea>
+                    <small data-ar="يمكنك استخدام HTML للتنسيق" data-en="You can use HTML for formatting">يمكنك استخدام HTML للتنسيق</small>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label data-ar="التصنيف *" data-en="Category *">التصنيف *</label>
+                        <select name="category" required>
+                            <option value="AI & Technology">AI & Technology</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Business">Business</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label data-ar="الكاتب *" data-en="Author *">الكاتب *</label>
+                        <input type="text" name="author" required placeholder="فريق NextAgent">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-ar="رابط الصورة (Unsplash/URL) *" data-en="Image URL (Unsplash/URL) *">رابط الصورة *</label>
+                    <input type="url" name="image_url" required placeholder="https://images.unsplash.com/...">
+                    <small data-ar="استخدم روابط من Unsplash أو أي CDN" data-en="Use links from Unsplash or any CDN">استخدم روابط من Unsplash أو أي CDN</small>
+                </div>
+
+                <div class="form-group">
+                    <label data-ar="الوسوم (افصل بفواصل) *" data-en="Tags (comma separated) *">الوسوم *</label>
+                    <input type="text" name="tags" placeholder="الذكاء الاصطناعي, الأتمتة, التحول الرقمي" required>
+                    <small data-ar="افصل الوسوم بفواصل" data-en="Separate tags with commas">افصل الوسوم بفواصل</small>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="published" checked>
+                        <span data-ar="نشر المقال مباشرة" data-en="Publish article immediately">نشر المقال مباشرة</span>
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" data-modal="blogModal" data-ar="إلغاء" data-en="Cancel">إلغاء</button>
+                    <button type="submit" class="btn btn-primary" data-ar="حفظ المقال" data-en="Save Article">حفظ المقال</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

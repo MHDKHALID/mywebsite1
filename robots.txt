@@ -1,0 +1,29 @@
+# NextAgent.tech - Robots.txt
+# =================================
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nextagent.tech/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin.html
+Disallow: /js/admin.js
+Disallow: /css/admin.css
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Popular search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

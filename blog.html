@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مدونة NextAgent.tech - مقالات حول الذكاء الاصطناعي والأتمتة للشركات">
+    <title>المدونة - NextAgent.tech</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/cookie-consent.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/33376905001" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🤖</span>
+                    <span class="logo-text">NextAgent</span>
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#home" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                    <li><a href="index.html#about" class="nav-link" data-ar="من نحن" data-en="About">من نحن</a></li>
+                    <li><a href="index.html#services" class="nav-link" data-ar="الخدمات" data-en="Services">الخدمات</a></li>
+                    <li><a href="blog.html" class="nav-link active" data-ar="المدونة" data-en="Blog">المدونة</a></li>
+                    <li><a href="booking.html" class="nav-link" data-ar="احجز استشارة" data-en="Book Consultation">احجز استشارة</a></li>
+                    <li><a href="index.html#contact" class="nav-link" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="lang-toggle" id="langToggle" aria-label="Language Toggle">
+                        <span class="lang-text">EN</span>
+                    </button>
+                    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1 class="hero-title" data-ar="مدونة NextAgent" data-en="NextAgent Blog">مدونة NextAgent</h1>
+            <p class="hero-subtitle" data-ar="آخر المقالات والرؤى حول الذكاء الاصطناعي والأتمتة" data-en="Latest articles and insights on AI and automation">
+                آخر المقالات والرؤى حول الذكاء الاصطناعي والأتمتة
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content">
+        <div class="container">
+            <!-- Blog Filters -->
+            <div class="blog-filters">
+                <button class="filter-btn active" data-category="all" data-ar="الكل" data-en="All">الكل</button>
+                <button class="filter-btn" data-category="AI & Technology" data-ar="الذكاء الاصطناعي" data-en="AI & Technology">الذكاء الاصطناعي</button>
+                <button class="filter-btn" data-category="Healthcare" data-ar="الرعاية الصحية" data-en="Healthcare">الرعاية الصحية</button>
+                <button class="filter-btn" data-category="Marketing" data-ar="التسويق" data-en="Marketing">التسويق</button>
+                <button class="filter-btn" data-category="Business" data-ar="الأعمال" data-en="Business">الأعمال</button>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="blog-grid" id="blogGrid">
+                <div class="loading">جاري تحميل المقالات...</div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-wrapper">
+                <button class="btn btn-primary" id="loadMoreBtn" style="display: none;" data-ar="تحميل المزيد" data-en="Load More">تحميل المزيد</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 data-ar="اشترك في نشرتنا البريدية" data-en="Subscribe to Our Newsletter">اشترك في نشرتنا البريدية</h2>
+                <p data-ar="احصل على آخر المقالات والنصائح مباشرة في بريدك" data-en="Get the latest articles and tips directly in your inbox">
+                    احصل على آخر المقالات والنصائح مباشرة في بريدك
+                </p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="البريد الإلكتروني" data-placeholder-ar="البريد الإلكتروني" data-placeholder-en="Email Address" required>
+                    <button type="submit" class="btn btn-primary" data-ar="اشترك الآن" data-en="Subscribe Now">اشترك الآن</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">🤖</span>
+                        <span class="logo-text">NextAgent</span>
+                    </a>
+                    <p data-ar="وكلاء الذكاء الاصطناعي والأتمتة للشركات الصغيرة والمتوسطة" 
+                       data-en="AI Agents and Automation for Small and Medium Businesses">
+                        وكلاء الذكاء الاصطناعي والأتمتة للشركات الصغيرة والمتوسطة
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                        <li><a href="index.html#about" data-ar="من نحن" data-en="About">من نحن</a></li>
+                        <li><a href="blog.html" data-ar="المدونة" data-en="Blog">المدونة</a></li>
+                        <li><a href="booking.html" data-ar="احجز استشارة" data-en="Book">احجز استشارة</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-ar="تواصل معنا" data-en="Contact">تواصل معنا</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +33 376 905 001</li>
+                        <li><i class="fas fa-envelope"></i> salse@nextagent.tech</li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-ar="باريس - فرنسا" data-en="Paris - France">باريس - فرنسا</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-ar="تابعنا" data-en="Follow Us">تابعنا</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 NextAgent.tech. <span data-ar="جميع الحقوق محفوظة" data-en="All rights reserved">جميع الحقوق محفوظة</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/cookie-consent.js"></script>
+</body>
+</html>
